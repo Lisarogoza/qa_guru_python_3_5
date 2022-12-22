@@ -32,7 +32,7 @@ def test_fill_reg_form():
                                                and '14 Feb 1998'
                                                and 'Physics'
                                                and 'Music'
-                                               #and 'photo.jpeg'
+                                               and 'photo.jpeg'
                                                and 'Прианка Чопра стрит, 504'
                                                and 'NCR'
                                                and 'Noida'))
