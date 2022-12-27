@@ -24,18 +24,16 @@ def test_fill_reg_form():
     browser.element('#react-select-3-input').type('NCR').press_enter()
     browser.element('#react-select-4-input').type('Noida').press_enter()
     browser.element('#submit').press_enter()
-    browser.element('.table').should(have.text('Иван'
-                                               and 'Севцов'
-                                               and 's1e5v7_8l9e0f3@ya.ru'
-                                               and 'Male'
-                                               and '89200000000'
-                                               and '14 Feb 1998'
-                                               and 'Physics'
-                                               and 'Music'
-                                               and 'photo.jpeg'
-                                               and 'Прианка Чопра стрит, 504'
-                                               and 'NCR'
-                                               and 'Noida'))
 
-
-
+    browser.all('.table-responsive td:nth-child(2)').should(have.texts('Иван Севцов',
+                                                                       's1e5v7_8l9e0f3@ya.ru',
+                                                                       'Male',
+                                                                       '8920000000',
+                                                                       '14 February,1998',
+                                                                       'Physics',
+                                                                       'Music',
+                                                                       'image.png',
+                                                                       'Прианка Чопра стрит, 504',
+                                                                       'NCR Noida'
+                                                                       )
+                                                            )
